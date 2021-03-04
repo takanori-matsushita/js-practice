@@ -72,7 +72,7 @@ function formatDate(date) {
   } else if (calcDate < 60 * 60 * 1000) {
     return `${calcDate / 60 / 1000} min. ago`;
   } else {
-    return calcDate;
+    //
   }
 }
 console.log(formatDate(new Date(new Date() - 1))); // "right now"
