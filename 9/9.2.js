@@ -32,3 +32,5 @@ class Clock {
 
 clock = new Clock({ template: "h:m:s" });
 clock.start();
+
+module.exports = Clock;
