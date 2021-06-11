@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+      window.addEventListener('load', () => {
+        const div = document.body.firstElementChild
+        console.log(div)
+        const ul = document.body.lastElementChild
+        console.log(ul)
+        const second_li = document.body.lastElementChild.lastElementChild
+        console.log(second_li)
+
+        console.log(ul.lastChild.nextSibling)
+        console.log(ul.children[0].previousSibling)
+      })
+    </script>
+  </head>
+<body>
+  <div>Users:</div>
+  <ul>
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+</body>
+</html>
