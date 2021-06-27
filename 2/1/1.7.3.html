@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a list</title>
+</head>
+<body>
+  <h1>Create a list</h1>
+  <script>
+    const ul = document.createElement('ul')
+    document.body.appendChild(ul)
+    while(true) {
+      let item = prompt('Enter the text for the list item')
+      if(!item) {
+        break
+      }
+      let li = document.createElement('li')
+      li.textContent = item
+      ul.append(li)
+    }
+  </script>
+</body>
+</html>
