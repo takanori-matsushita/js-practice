@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table id="table">
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Smith</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Pete</td>
+      <td>Brown</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Ann</td>
+      <td>Lee</td>
+      <td>5</td>
+    </tr>
+  </table>
+
+  <script>
+    let sortedRows = Array.from(table.rows)
+      .slice(1) // 1行目は見出しのため削除する
+      .sort((rowA, rowB) => rowA.cells[0].innerHTML > rowB.cells[0].innerHTML ? 1 : -1); // Nameを昇順に並び替える
+
+    table.tBodies[0].append(...sortedRows);
+  </script>
+</body>
+
+</html>
